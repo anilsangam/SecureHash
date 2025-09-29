@@ -119,7 +119,7 @@ contract Project {
     
     /**
      * @dev Get all hash IDs created by a user
-     * @param _user The address of the user
+    
      * @return Array of hash IDs created by the user
      */
     function getUserHashes(address _user) public view returns (uint256[] memory) {
