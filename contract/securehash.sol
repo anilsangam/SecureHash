@@ -1,11 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-/**
- * @title SecureHash
- * @dev A smart contract for secure hash storage and verification
- * @author SecureHash Team
- */
 contract Project {
     
     // Structure to store hash data
@@ -42,12 +37,7 @@ contract Project {
         _;
     }
     
-    /**
-     * @dev Store a new hash with description
-     * @param _data The original data to be hashed
-     * @param _description Description of the hash
-     * @return hashId The ID of the stored hash
-     */
+    
     function storeHash(string memory _data, string memory _description) public returns (uint256) {
         // Generate hash from the input data
         bytes32 hashValue = keccak256(abi.encodePacked(_data));
@@ -65,7 +55,7 @@ contract Project {
             isActive: true
         });
         
-        // Add to user's hash list
+        // Add to user's hash list 
         userHashes[msg.sender].push(newHashId);
         
         // Emit event
